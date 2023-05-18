@@ -32,7 +32,7 @@ const Model = ({ modelId, qr = false }) => {
           </div>
           <div className="modal-body text-center">
             {qr ? (
-              <QRCode value={`http://localhost:5173/user/${user?._id}`} />
+              <QRCode value={`${window.location.href}/${user?._id}`} />
             ) : (
               <span
                 className="text-primary text-break"
@@ -42,7 +42,7 @@ const Model = ({ modelId, qr = false }) => {
                 ref={textRef}
                 onClick={handleCopy}
               >
-                {`http://localhost:5173/user/${user?._id}`}
+              {`${window.location.href}/${user?._id}`}
               </span>
             )}
           </div>
